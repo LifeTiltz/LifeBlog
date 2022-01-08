@@ -1,25 +1,24 @@
 import { useState } from "react";
 import { useHistory } from 'react-router-dom'
+import { addBlog } from "./fireBase";
+import GetData from "./GetData";
+
 
 const Create = () => {
     const [title, setTitle] = useState("")
     const [body, setBody] = useState("")
-    const [author, setAuthor] = useState("mario")
+    const [author, setAuthor] = useState("")
     const history = useHistory()
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const blog = { title, body, author }
-        console.log(blog);
-        fetch('http://localhost:4000/blogs', {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(blog)
-        }).then(() => {
-            console.log('new blog added');
-            history.push('/')
-        })
+        addBlog(title, author, body)
+        // GetData()
+        // after we get back the data
+        // lets move to that blogDetail
+        history.push('/');
     }
+
 
     return (
         <div className="create">
@@ -37,14 +36,14 @@ const Create = () => {
                     required
                     value={body}
                     onChange={(e) => setBody(e.target.value)} />
+
                 <label >Blog Author</label>
-                <select
+
+                <textarea
+                    required
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
-                >
-                    <option value="mario">Mario</option>
-                    <option value="Yoshi">Yoshi</option>
-                </select>
+                />
                 {<button>Add Blog</button>}
 
             </form>

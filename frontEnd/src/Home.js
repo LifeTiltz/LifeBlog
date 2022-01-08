@@ -1,16 +1,14 @@
 import BlogList from "./BlogList";
-import useFetch from "./useFetch";
+import GetData from "./GetData";
 
 const Home = () => {
-    const { data: blogs, isPending, error } = useFetch('http://localhost:4000/blogs')
-
-
+    let books = GetData()
+    console.log(books);
 
     return (
         <div className="home">
-            {error && <div>{error}</div>}
-            {isPending && <div>Loading...</div>}
-            {blogs && <BlogList blogs={blogs} />}
+            {!books[1] && <div>Loading...</div>}
+            {books[1] && <BlogList blogs={books} />}
         </div>
     );
 }

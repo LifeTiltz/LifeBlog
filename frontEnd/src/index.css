@@ -45,6 +45,14 @@
 .blog-preview:hover {
   box-shadow: 1px 3px 5px rgba(0,0,0,0.51);
 }
+.blog-preview h3 {
+  width: 100%;
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 17px;
+  color: rgb(122, 122, 122);
+}
 .blog-preview h2 {
   font-size: 20px;
   color: #f1356d;
