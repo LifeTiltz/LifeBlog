@@ -26,22 +26,22 @@ const Create = () => {
 
     return (
         <div className="create">
-            <h2>Add a New Blog</h2>
+            <h2>Whats a good book?</h2>
             <form onSubmit={handleSubmit}>
-                <label>Blog title:</label>
+                <label>Book title:</label>
                 <input
                     type="text"
                     required
                     value={title}
                     onChange={(e) => setTitle(e.target.value)} />
 
-                <label>Blog body:</label>
+                <label>Description:</label>
                 <textarea
                     required
                     value={body}
                     onChange={(e) => setBody(e.target.value)} />
 
-                <label >Blog Author</label>
+                <label >Author</label>
 
                 <textarea
                     required

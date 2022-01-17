@@ -1,9 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
-
-//import { books } from "./fireBase"
-
 import { projFireStore } from './fireBase';
+import DeleteButton from "./DeleteButton";
 
 
 const BlogDetails = () => {
@@ -34,6 +32,7 @@ const BlogDetails = () => {
             {book && <h1>{book.title}</h1>}
             {book && <h2>{book.body}</h2>}
             {book && <p>Author: {book.author}</p>}
+            <DeleteButton id={id.id} />
         </div>
     );
 }
