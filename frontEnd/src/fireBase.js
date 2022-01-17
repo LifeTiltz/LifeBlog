@@ -20,29 +20,3 @@ export const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 
 export const projFireStore = firebase.firestore()
-
-// const db = getFirestore()
-
-// export const colRef = collection(db, 'books')
-
-
-
-// getDocs(colRef)
-//     .then((snapshot) => {
-//         snapshot.docs.forEach((doc) => {
-//             setBooks(books => ({ ...doc.data(), id: doc.id }))
-//             //books.push({ ...doc.data(), id: doc.id })
-//         })
-//         console.log(books);
-//     })
-//     .catch(err => {
-//         console.log(err);
-//     })
-
-// export let addBlog = (titleOf, authorOf, bodyOf) => {
-//     addDoc(colRef, {
-//         title: titleOf,
-//         author: authorOf,
-//         body: bodyOf
-//     })
-// }
