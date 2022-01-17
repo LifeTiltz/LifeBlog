@@ -26,7 +26,7 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 600px;
+  max-width: 75%;
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
@@ -45,7 +45,7 @@
   color: #f1356d;
 }
 .content {
-  max-width: 600px;
+  max-width: 75%;
   margin: 40px auto;
   padding: 20px;
 }
@@ -107,7 +107,7 @@
 
 /* create new blog form */
 .create {
-  max-width: 400px;
+  max-width: 60%;
   margin: 0 auto;
   text-align: center;
 }
