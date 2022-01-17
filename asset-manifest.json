@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/LifeBlog/static/css/main.eb3177c4.css",
-    "main.js": "/LifeBlog/static/js/main.4768b1ac.js",
-    "index.html": "/LifeBlog/index.html",
-    "main.eb3177c4.css.map": "/LifeBlog/static/css/main.eb3177c4.css.map",
-    "main.4768b1ac.js.map": "/LifeBlog/static/js/main.4768b1ac.js.map"
+    "main.css": "/static/css/main.1987d60f.css",
+    "main.js": "/static/js/main.af31f80d.js",
+    "index.html": "/index.html",
+    "main.1987d60f.css.map": "/static/css/main.1987d60f.css.map",
+    "main.af31f80d.js.map": "/static/js/main.af31f80d.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb3177c4.css",
-    "static/js/main.4768b1ac.js"
+    "static/css/main.1987d60f.css",
+    "static/js/main.af31f80d.js"
   ]
 }
