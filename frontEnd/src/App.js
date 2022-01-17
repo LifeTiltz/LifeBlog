@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Create from './create';
 import BlogDetails from './BlogDetails';
 import NotFound from './NotFound';
+import RandomShake from './RandomShake';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
             </Route>
             <Route exact path="/LifeBlog/blogs/:id">
               <BlogDetails />
+            </Route>
+            <Route exact path="/LifeBlog/poem">
+              <RandomShake />
             </Route>
             <Route path="*">
               <NotFound />

@@ -10,8 +10,6 @@ export default function DeleteButton({ id }) {
     const handleClick = (id) => {
         projFireStore.collection("books").doc(id).delete()
         history.push('/LifeBlog');
-        let test = GetDataAgain()
-        console.log(test);
     }
 
     return (
@@ -20,6 +18,7 @@ export default function DeleteButton({ id }) {
                 className="delete"
                 src={deleteButton}
                 onClick={() => handleClick(id)}
+                alt="Delete trashcan"
             />
         </>
     )

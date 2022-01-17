@@ -6,6 +6,22 @@
   font-family: "Quicksand";
   color: #333;
 }
+
+@media only screen and (max-width: 516px){
+  .navbar a {
+    display: block;
+  align-items: right;
+  text-decoration: none;
+  padding: 10px 5px 10px 10px;
+  }
+  .navbar h1 {
+    display: block;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 5px 10px 10px;
+
+  }
+}
 .navbar {
   padding: 20px;
   display: flex;
@@ -120,3 +136,13 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+.poems h3 {
+  /* margin: 30px 0px 30px 0px; */
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 2px solid #fafafa;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+  border-radius: 15px;
+}
+
