@@ -17,7 +17,7 @@ const Create = () => {
 
         try {
             await projFireStore.collection("books").add(doc)
-            history.push('/');
+            history.push('/LifeBlog');
         } catch (err) {
             console.log(err);
         }
