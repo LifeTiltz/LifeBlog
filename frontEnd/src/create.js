@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useHistory } from 'react-router-dom'
-import { addBlog } from "./fireBase";
-import GetData from "./GetData";
+import { projFireStore } from './fireBase';
+
 
 
 const Create = () => {
@@ -10,13 +10,17 @@ const Create = () => {
     const [author, setAuthor] = useState("")
     const history = useHistory()
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        addBlog(title, author, body)
-        // GetData()
-        // after we get back the data
-        // lets move to that blogDetail
-        history.push('/');
+
+        const doc = { title, body, author }
+
+        try {
+            await projFireStore.collection("books").add(doc)
+            history.push('/');
+        } catch (err) {
+            console.log(err);
+        }
     }
 
 

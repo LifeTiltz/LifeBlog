@@ -1,8 +1,11 @@
-import { initializeApp } from 'firebase/app'
-import {
-    getFirestore, collection, getDocs,
-    addDoc
-} from 'firebase/firestore'
+// import { initializeApp } from 'firebase/app'
+// import {
+//     getFirestore, collection, getDocs,
+//     addDoc
+// } from 'firebase/firestore'
+
+import firebase from "firebase/app"
+import "firebase/firestore"
 
 
 export const firebaseConfig = {
@@ -14,11 +17,13 @@ export const firebaseConfig = {
     appId: "1:384239374442:web:e2c4362d7eed4cdc20ba13"
 };
 
-initializeApp(firebaseConfig)
+firebase.initializeApp(firebaseConfig)
 
-const db = getFirestore()
+export const projFireStore = firebase.firestore()
 
-export const colRef = collection(db, 'books')
+// const db = getFirestore()
+
+// export const colRef = collection(db, 'books')
 
 
 
@@ -34,10 +39,10 @@ export const colRef = collection(db, 'books')
 //         console.log(err);
 //     })
 
-export let addBlog = (titleOf, authorOf, bodyOf) => {
-    addDoc(colRef, {
-        title: titleOf,
-        author: authorOf,
-        body: bodyOf
-    })
-}
+// export let addBlog = (titleOf, authorOf, bodyOf) => {
+//     addDoc(colRef, {
+//         title: titleOf,
+//         author: authorOf,
+//         body: bodyOf
+//     })
+// }

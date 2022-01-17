@@ -1,9 +1,8 @@
 import BlogList from "./BlogList";
-import GetData from "./GetData";
+import GetDataAgain from "./GetDataAgain";
 
 const Home = () => {
-    let books = GetData()
-    console.log(books);
+    let books = GetDataAgain()
 
     return (
         <div className="home">

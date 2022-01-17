@@ -1,69 +1,39 @@
-import { useHistory, useParams } from "react-router-dom";
-import useFetch from "./useFetch";
-import { books } from "./fireBase"
-import GetData from "./GetData";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from 'react';
+
+//import { books } from "./fireBase"
+
+import { projFireStore } from './fireBase';
 
 
 const BlogDetails = () => {
-    const idParam = useParams()
-    const history = useHistory();
-    console.log(idParam);
-    console.log(idParam.id);
+    const id = useParams()
+    console.log(id.id);
 
-    //const { data: blog, isPending, error } = useFetch(`http://localhost:4000/blogs/` + id)
+    const [book, setBook] = useState()
+    const [error, setError] = useState(false)
 
-    let specificKey = idParam.id
-    // if (idParam !== undefined) {
-    //     specificKey = idParam.id
-    // }
-
-    // else if (id !== undefined) {
-    //     specificKey = id
-    // }
-    let rubi = GetData()
-    let blogs = GetData()
-    let blogsArr = blogs.blogs
-
-    console.log(rubi);
-
-    let findBlog = (blogs) => {
-        for (let i = 0; i < blogs.length; i++) {
-            if (blogs[i].id == specificKey) {
-                console.log("Ive a HugeD1K");
-                return blogs[i]
+    useEffect(() => {
+        console.log("in useeffect");
+        projFireStore.collection("books").doc(id.id).get().then((doc) => {
+            if (doc.exists) {
+                console.log("doc exists");
+                setBook(doc.data())
             }
-        }
-    }
+            else {
+                setError(true)
+                console.log("seems to not exist mate");
+            }
 
-    let thisBlog = findBlog(blogsArr)
-
-
-    // const handleClick = () => {
-    //     fetch(`http://localhost:4000/delete/${id}`, {
-    //         method: 'DELETE'
-    //     }).then(() => {
-    //         //
-    //         //Need to fix this
-    //         //
-    //         history.push('/');
-    //     })
-    // }
+        })
+    }, [id])
 
     return (
-        <div className="BlogDetails">
-            {//isPending && <div>Loading...</div>}
-                {//error && <div>Sorry there seemed to be an error</div>}
-                }}
-            {thisBlog && <div className="article">
-                <article>
-                    <h2>{thisBlog.title}</h2>
-                    <p>Written when: {thisBlog.author}</p>
-                    <div>{thisBlog.body}</div>
-                    {/* <button onClick={handleClick}>Delete</button> */}
-                </article>
-            </div>
-
-            }
+        <div className="Blog-Detail">
+            {error && <h3>Seems you've found a page that doesn't exist. Why dont you add a blog to tell people how your feeling?</h3>}
+            {book && <h1>{book.title}</h1>}
+            {book && <h2>{book.body}</h2>}
+            {book && <p>Author: {book.author}</p>}
         </div>
     );
 }
