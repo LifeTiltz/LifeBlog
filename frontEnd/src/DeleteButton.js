@@ -3,10 +3,12 @@ import { projFireStore } from './fireBase';
 import { useHistory } from 'react-router-dom'
 
 export default function DeleteButton({ id }) {
+    const history = useHistory()
+
 
     const handleClick = (id) => {
         projFireStore.collection("books").doc(id).delete()
-        useHistory.push('/LifeBlog');
+        history.push('/LifeBlog');
     }
 
     return (
