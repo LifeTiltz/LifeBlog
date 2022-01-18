@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
+.cardgame {
+    max-width: 860px;
+    margin: 40px auto;
+  }
+  button.cardgame {
+    background: none;
+    border: 2px solid rgb(226, 82, 82);
+    padding: 6px 12px;
+    border-radius: 400px;
+    color: rgb(73, 22, 22);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 54em;
+  }
+  button:hover.cardgame {
+    background: #65962e;
+    color: rgb(64, 182, 64);
+  }
+
+
+
+body.cardgame {
+  font-family: Raleway, sans-serif;
+  margin: 0;
+  font-size: 1.5em;
+  text-align: center;
+  background: #908f92;
+  color: #fff;
+}

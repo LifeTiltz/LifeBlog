@@ -5,6 +5,7 @@ import Create from './create';
 import BlogDetails from './BlogDetails';
 import NotFound from './NotFound';
 import RandomShake from './RandomShake';
+import CardGame from './cardGame/CardGame';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
             </Route>
             <Route exact path="/LifeBlog/poem">
               <RandomShake />
+            </Route>
+            <Route exact path="/LifeBlog/game">
+              <CardGame />
             </Route>
             <Route path="*">
               <NotFound />

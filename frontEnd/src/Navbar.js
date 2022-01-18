@@ -8,6 +8,7 @@ const Navbar = () => {
                 <Link to="/LifeBlog">Home</Link>
                 <Link to="/LifeBlog/create">Add new Book</Link>
                 <Link to="/LifeBlog/poem">Random Poem</Link>
+                <Link to="/LifeBlog/game">Memory game</Link>
             </div>
         </nav>
     );
