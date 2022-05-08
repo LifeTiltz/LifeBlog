@@ -4,7 +4,8 @@
 * {
   margin: 0;
   font-family: "Quicksand";
-  color: #333;
+  color: #bec9d4;
+  background: #22272e;
 }
 
 @media only screen and (max-width: 516px){
@@ -31,7 +32,7 @@
   border-bottom: 1px solid #f2f2f2;
 }
 .navbar h1 {
-  color: #f1356d;
+  color: #539bf5;
 }
 .navbar .links {
   margin-left: auto;
@@ -42,7 +43,7 @@
   padding: 6px;
 }
 .navbar a:hover {
-  color: #f1356d;
+  color: #539bf5;
 }
 .content {
   max-width: 75%;
@@ -53,13 +54,14 @@
 /* blog previews / list */
 .blog-preview {
   padding: 10px 16px;
-  margin: 20px 0;
-  border-bottom: 1px solid #fafafa;
-  box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+  margin: 30px 0;
+  border-bottom: 1px solid #6565654c;
+  box-shadow: 1px 2px 5px rgba(67, 67, 67, 0.631);
   border-radius: 15px;
+  color: #539bf5;
 }
 .blog-preview:hover {
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.51);
+  box-shadow: 1px 3px 10px rgba(0,0,0,0.51);
 }
 .blog-preview h3 {
   width: 100%;
@@ -67,11 +69,11 @@
   white-space: nowrap;
   overflow: hidden;
   font-size: 17px;
-  color: rgb(122, 122, 122);
+  color: rgb(153, 153, 153);
 }
 .blog-preview h2 {
   font-size: 20px;
-  color: #f1356d;
+  color: #539bf5;
   margin-bottom: 8px;
 }
 
@@ -82,14 +84,14 @@
 /* blog details page */
 .blog-details h2 {
   font-size: 20px;
-  color: #f1356d;
+  color: #539bf5;
   margin-bottom: 10px;
 }
 .blog-details div {
   margin: 20px 0;
 }
 .blog-details button {
-  background: #f1356d;
+  background: #539bf5;
   color: #fff;
   border: 0;
   padding: 8px;
@@ -117,7 +119,7 @@
 }
 .create h2 {
   font-size: 20px;
-  color: #f1356d;
+  color: #539bf5;
   margin-bottom: 30px;
 }
 .create input, .create textarea, .create select {
@@ -129,7 +131,7 @@
   display: block;
 }
 .create button {
-  background: #f1356d;
+  background: #539bf5;
   color: #fff;
   border: 0;
   padding: 8px;
@@ -141,8 +143,8 @@
   /* margin: 30px 0px 30px 0px; */
   padding: 10px 16px;
   margin: 20px 0;
-  border-bottom: 2px solid #fafafa;
-  box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+  border-bottom: 2px solid #fafafa30;
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.488);
   border-radius: 15px;
 }
 

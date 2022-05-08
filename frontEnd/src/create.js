@@ -37,13 +37,14 @@ const Create = () => {
 
                 <label>Description:</label>
                 <textarea
+                    rows="15"
                     required
                     value={body}
                     onChange={(e) => setBody(e.target.value)} />
 
                 <label >Author</label>
 
-                <textarea
+                <input
                     required
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}

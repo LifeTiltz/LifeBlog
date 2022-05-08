@@ -88,7 +88,7 @@ export default function CardGame() {
                     />
                 ))}
             </div>
-            <h1>Turn {turns}</h1>
+            <h2>Turn {turns}</h2>
         </div>
     )
 }
