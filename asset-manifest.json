@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/LifeBlog/static/css/main.5f2fb789.css",
-    "main.js": "/LifeBlog/static/js/main.4f8b15ea.js",
+    "main.css": "/LifeBlog/static/css/main.baf1adb8.css",
+    "main.js": "/LifeBlog/static/js/main.873271c9.js",
     "index.html": "/LifeBlog/index.html",
     "static/media/deleteButton.svg": "/LifeBlog/static/media/deleteButton.b5b4eb1e58f4d94180e2e0670791a3e7.svg",
-    "main.5f2fb789.css.map": "/LifeBlog/static/css/main.5f2fb789.css.map",
-    "main.4f8b15ea.js.map": "/LifeBlog/static/js/main.4f8b15ea.js.map"
+    "main.baf1adb8.css.map": "/LifeBlog/static/css/main.baf1adb8.css.map",
+    "main.873271c9.js.map": "/LifeBlog/static/js/main.873271c9.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f2fb789.css",
-    "static/js/main.4f8b15ea.js"
+    "static/css/main.baf1adb8.css",
+    "static/js/main.873271c9.js"
   ]
 }
